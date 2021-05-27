@@ -75,37 +75,8 @@ export const query = graphql`
               ... on SS_ElementContent {
                 html
               }
-              ... on SS_FileBlock {
-                  file {
-                      ... on SS_FileInterface {
-                      localFile {
-                          childImageSharp {
-                              gatsbyImageData(
-                                  width: 200
-                              )
-                          }
-                      }
-                    }
-                  }
-              }
               ... on SS_BannerBlock {
                 callToActionLink
-                file {
-                    ... on SS_FileInterface {
-                        localFile {
-                            absolutePath    
-                        }
-                    }
-                    ... on SS_Image {
-                        localFile {
-                            childImageSharp {
-                                gatsbyImageData(
-                                    width: 200
-                                )
-                            }
-                        }    
-                    }
-                }
               }
            }
          }

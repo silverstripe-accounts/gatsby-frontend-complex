@@ -1,5 +1,5 @@
-const path = require('path');
-require(`dotenv`).config();
+const path = require("path")
+require(`dotenv`).config()
 
 module.exports = {
   flags: {
@@ -7,9 +7,9 @@ module.exports = {
     FAST_DEV: true,
   },
   siteMetadata: {
-    title: `Gatsby/Silverstripe CMS POC`,
-    description: `Gatsby + Silverstripe CMS using GraphQL 4`,
-    author: `Uncle Cheese`,
+    title: `My Silverstripe CMS + Gatsby website`,
+    description: ``,
+    author: ``,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -29,21 +29,21 @@ module.exports = {
         baseUrl: process.env.SILVERSTRIPE_CMS_BASE_URL,
         apiKey: process.env.SILVERSTRIPE_CMS_API_KEY,
         stage: process.env.SILVERSTRIPE_STAGE,
-        forceRefresh: process.env.SILVERSTRIPE_FORCE_REFRESH,
         concurrentRequests: 5,
         batchSize: 300,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: false,
-        develop: true,
-        ignore: [], // Ignore files/folders
-        purgeCSSOptions: {          // https://purgecss.com/configuration.html#options
-        },
+        develop: false,
+        // Ignore files/folders
+        ignore: [],
+        // https://purgecss.com/configuration.html#options
+        purgeCSSOptions: {},
       },
-    },    
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
