@@ -29,7 +29,7 @@ module.exports = {
         baseUrl: process.env.SILVERSTRIPE_CMS_BASE_URL,
         apiKey: process.env.SILVERSTRIPE_CMS_API_KEY,
         stage: process.env.SILVERSTRIPE_STAGE,
-        concurrentRequests: 5,
+        concurrentRequests: 3,
         batchSize: 300,
       },
     },
